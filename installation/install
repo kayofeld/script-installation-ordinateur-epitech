@@ -1,0 +1,84 @@
+#! /bin/bash
+
+if [ $UID != 0 ]
+then
+    echo "Lancer ce script en tant que sudo:"
+    echo "sudo $0 $* votre_login"
+    exit 1
+fi
+if [ -z "$1" ]
+then
+    echo "Donner en premier argument votre login."
+    exit
+fi
+echo "-------------------------"
+echo "|INSTALLATION DE NS_AUTH|"
+echo "-------------------------"
+cp .files/ns_auth /usr/bin/ns_auth
+chmod 755 /usr/bin/ns_auth
+echo "----------------------"
+echo "|INSTALLATION DE BLIH|"
+echo "----------------------"
+cp .files/blih /usr/bin/blih
+chmod 755 /usr/bin/blih
+echo "---------------------------------------"
+echo "|MISE À JOUR DES SOURCES ET DU SYSTÈME|"
+echo "---------------------------------------"
+apt-get update
+apt-get upgrade
+echo "--------------------------------------------------------"
+echo "|INSTALLATION DE EMACS ET DU SYSTÈME DE HEADERS EPITECH|"
+echo "--------------------------------------------------------"
+apt-get install emacs
+cp .files/std.el /usr/share/emacs24/site-lisp/
+cp .files/std_comment.el /usr/share/emacs24/site-lisp/
+chmod 755 /usr/share/emacs24/site-lisp/std.el
+chmod 755 /usr/share/emacs24/site-lisp/std_comment.el
+cp .files/std.el /usr/share/emacs/site-lisp/
+cp .files/std_comment.el /usr/share/emacs/site-lisp/
+chmod 755 /usr/share/emacs/site-lisp/std.el
+chmod 755 /usr/share/emacs/site-lisp/std_comment.el
+cp .files/.emacs /home/$USER/
+chmod 555 /home/$USER/.emacs
+cp -r .files/.emacs.d /home/$USER/
+chmod 555 /home/$USER/.emacs.d
+chmod 555 /home/$USER/.emacs.d/*
+echo "------------------------------------------------------"
+echo "|INSTALLATION DE BUILD-ESSENTIALS POUR LA COMPILATION|"
+echo "------------------------------------------------------"
+apt-get install build-essentials
+echo "----------------------"
+echo "|INSTALLATION DE CURL|"
+echo "----------------------"
+apt-get install curl
+echo "-----------------------------------------------------------------------------"
+echo "|INSTALLATION DE GIT, GENERATION DE LA CLE SSH ET UPLOAD SUR SERVEUR EPITECH|"
+echo "-----------------------------------------------------------------------------"
+apt-get install git
+ssh-keygen
+echo "mot de passe UNIX (bocal, pour blih)"
+blih -u "$1" sshkey upload /home/$USER/.ssh/id_rsa.pub
+echo "---------------------------------------------------"
+echo "|INSTALLATION ET CONFIGURATION DE ZSH ET OH MY ZSH|"
+echo "---------------------------------------------------"
+apt-get install zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+chsh $USER -s /usr/bin/zsh
+echo "alias blih='blih -u $1'" >> ~/.zshrc
+echo "alias ns_auth='ns_auth -u $1'" >> ~/.zshrc
+echo "----------------------------"
+echo "|INSTALLATION DE TERMINATOR|"
+echo "----------------------------"
+apt-get install terminator
+echo "-------------------------------------------- -----"
+echo "|CHANGEMENT DES DROITS (-) SUR POWEROFF ET REBOOT|"
+echo "--------------------------------------------------"
+chmod +s /sbin/poweroff
+chmod +s /sbin/reboot
+echo "--------------------------------------"
+echo "|EFFAÇAGE DES FICHIERS D'INSTALLATION|"
+echo "--------------------------------------"
+rm -rvf ../installation
+echo "-----------------------------------------------------"
+echo "|VOTRE ORDINATEUR EST PRÊT À L'UTILISATION À EPITECH|"
+echo "-----------------------------------------------------"
