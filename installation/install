@@ -11,24 +11,34 @@ then
     echo "Donner en premier argument votre login."
     exit
 fi
+RED='\033[0;31m'
+STANDARD='\033[0m'
+printf "${RED}"
 echo "-------------------------"
 echo "|INSTALLATION DE NS_AUTH|"
 echo "-------------------------"
+printf "${STANDARD}"
 cp .files/ns_auth /usr/bin/ns_auth
 chmod 755 /usr/bin/ns_auth
+printf "${RED}"
 echo "----------------------"
 echo "|INSTALLATION DE BLIH|"
 echo "----------------------"
+printf "${STANDARD}"
 cp .files/blih /usr/bin/blih
 chmod 755 /usr/bin/blih
+printf "${RED}"
 echo "---------------------------------------"
 echo "|MISE À JOUR DES SOURCES ET DU SYSTÈME|"
 echo "---------------------------------------"
+printf "${STANDARD}"
 apt-get update
 apt-get upgrade
+printf "${RED}"
 echo "--------------------------------------------------------"
 echo "|INSTALLATION DE EMACS ET DU SYSTÈME DE HEADERS EPITECH|"
 echo "--------------------------------------------------------"
+printf "${STANDARD}"
 apt-get install emacs
 cp .files/std.el /usr/share/emacs24/site-lisp/
 cp .files/std_comment.el /usr/share/emacs24/site-lisp/
@@ -43,42 +53,58 @@ chmod 555 /home/$USER/.emacs
 cp -r .files/.emacs.d /home/$USER/
 chmod 555 /home/$USER/.emacs.d
 chmod 555 /home/$USER/.emacs.d/*
+printf "${RED}"
 echo "------------------------------------------------------"
 echo "|INSTALLATION DE BUILD-ESSENTIALS POUR LA COMPILATION|"
 echo "------------------------------------------------------"
+printf "${STANDARD}"
 apt-get install build-essentials
+printf "${RED}"
 echo "----------------------"
 echo "|INSTALLATION DE CURL|"
 echo "----------------------"
+printf "${STANDARD}"
 apt-get install curl
+printf "${RED}"
 echo "-----------------------------------------------------------------------------"
 echo "|INSTALLATION DE GIT, GENERATION DE LA CLE SSH ET UPLOAD SUR SERVEUR EPITECH|"
 echo "-----------------------------------------------------------------------------"
+printf "${STANDARD}"
 apt-get install git
 ssh-keygen
 echo "mot de passe UNIX (bocal, pour blih)"
 blih -u "$1" sshkey upload /home/$USER/.ssh/id_rsa.pub
+printf "${RED}"
 echo "---------------------------------------------------"
 echo "|INSTALLATION ET CONFIGURATION DE ZSH ET OH MY ZSH|"
 echo "---------------------------------------------------"
+printf "${STANDARD}"
 apt-get install zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 chsh $USER -s /usr/bin/zsh
 echo "alias blih='blih -u $1'" >> ~/.zshrc
 echo "alias ns_auth='ns_auth -u $1'" >> ~/.zshrc
+printf "${RED}"
 echo "----------------------------"
 echo "|INSTALLATION DE TERMINATOR|"
 echo "----------------------------"
+printf "${STANDARD}"
 apt-get install terminator
+printf "${RED}"
 echo "-------------------------------------------- -----"
 echo "|CHANGEMENT DES DROITS (-) SUR POWEROFF ET REBOOT|"
 echo "--------------------------------------------------"
+printf "${STANDARD}"
 chmod +s /sbin/poweroff
 chmod +s /sbin/reboot
+printf "${RED}"
 echo "--------------------------------------"
 echo "|EFFAÇAGE DES FICHIERS D'INSTALLATION|"
 echo "--------------------------------------"
+printf "${STANDARD}"
 rm -rvf ../installation
+printf "${RED}"
 echo "-----------------------------------------------------"
 echo "|VOTRE ORDINATEUR EST PRÊT À L'UTILISATION À EPITECH|"
 echo "-----------------------------------------------------"
+printf "${STANDARD}"
