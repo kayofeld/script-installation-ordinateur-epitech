@@ -53,6 +53,24 @@ echo "------------------------------------------------------"
 printf "${STANDARD}"
 sudo apt-get install build-essentials
 printf "${RED}"
+echo "-------------------------"
+echo "|INSTALLATION DE VALGRIND|"
+echo "-------------------------"
+printf "${STANDARD}"
+sudo apt-get install valgrind
+printf "${RED}"
+echo "-----------------------"
+echo "|INSTALLATION DE OCAML|"
+echo "-----------------------"
+printf "${STANDARD}"
+sudo apt-get install ocaml
+printf "${RED}"
+echo "-------------------------------"
+echo "|INSTALLATION DE LA LIBNCURSES|"
+echo "-------------------------------"
+printf "${STANDARD}"
+sudo apt-get install libncurses
+printf "${RED}"
 echo "----------------------"
 echo "|INSTALLATION DE CURL|"
 echo "----------------------"
@@ -83,6 +101,13 @@ echo "|INSTALLATION DE TERMINATOR|"
 echo "----------------------------"
 printf "${STANDARD}"
 sudo apt-get install terminator
+printf "${RED}"
+echo "-----------------------------------------"
+echo "|INSTALLATION DES OUTILS COMPLEMENTAIRES|"
+echo "-----------------------------------------"
+printf "${STANDARD}"
+sudo apt-get install tree
+sudo apt-get install filezilla
 printf "${RED}"
 echo "-------------------------------------------- -----"
 echo "|CHANGEMENT DES DROITS (-) SUR POWEROFF ET REBOOT|"

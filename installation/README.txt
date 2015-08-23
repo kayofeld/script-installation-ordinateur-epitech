@@ -8,15 +8,20 @@ Ce script
    - fait la mise à jour de votre système
 
    - installe :
-   	  	   blih 
+   	  	   blih
 		   ns_auth
 		   emacs (et les headers epitech)
 		   build-essentials (libc etc. pour compilation)
+		   libncurses
 		   curl
 		   git
 		   zsh
-		   terminator
 		   oh-my-zsh
+		   terminator
+		   valgrind
+		   ocaml
+		   tree
+		   filezilla
 
    - génère et uploade votre clé ssh sur le serveur epitech
 
