@@ -2,7 +2,7 @@
 # README DU SCRIPT D'INSTALLATION DE LA CONFIGURATION++ EPITECH POUR ORDINATEURS BASÉS DEBIAN (*BUNTU, MINT..)#
 ###############################################################################################################
 
-utilisation : sudo ./install "login_x"
+utilisation : ./install "login_x"
 
 Ce script 
    - fait la mise à jour de votre système
