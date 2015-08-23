@@ -23,12 +23,15 @@ Ce script
 		   ocaml
 		   tree
 		   filezilla
+		   man google (bonus)
 
    - génère et uploade votre clé ssh sur le serveur epitech
 
    - change votre shell de base en zsh
 
    - génère les alias dans le .zshrc pour blih et ns_auth avec votre nom d'utilisateur
+
+   - les headers Epitech contiennent le login même si le username sur la session est différent
 
 Les fichiers sont situés dans .files
 
