@@ -96,6 +96,12 @@ chsh $USER -s /usr/bin/zsh
 echo "alias blih='blih -u $1'" >> /home/$USER/.zshrc
 echo "alias ns_auth='ns_auth -u $1'" >> /home/$USER/.zshrc
 printf "${RED}"
+echo "-------------------------------"
+echo "|INSTALLATION DU MAN DE GOOGLE|"
+echo "-------------------------------"
+printf "${STANDARD}"
+sudo cp .files/google.1 /usr/share/man/man1/google.1
+printf "${RED}"
 echo "----------------------------"
 echo "|INSTALLATION DE TERMINATOR|"
 echo "----------------------------"
