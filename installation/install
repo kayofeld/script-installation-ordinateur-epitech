@@ -95,7 +95,7 @@ echo "--------------------------------------"
 echo "|EFFAÇAGE DES FICHIERS D'INSTALLATION|"
 echo "--------------------------------------"
 printf "${STANDARD}"
-rm -rvf ../installation
+rm -rvf ../../script-installation-ordinateur-epitech/installation
 printf "${RED}"
 echo "-----------------------------------------------------"
 echo "|VOTRE ORDINATEUR EST PRÊT À L'UTILISATION À EPITECH|"
