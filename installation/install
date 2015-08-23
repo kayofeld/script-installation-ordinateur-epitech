@@ -41,19 +41,11 @@ echo "--------------------------------------------------------"
 printf "${STANDARD}"
 sudo apt-get install emacs
 sed 's/(getenv "USER")/"'$1'"/g' .files/std_comment.el > .files/std_comment.el
-sudo cp .files/std.el /usr/share/emacs24/site-lisp/
-sudo cp .files/std_comment.el /usr/share/emacs24/site-lisp/
-sudo chmod 755 /usr/share/emacs24/site-lisp/std.el
-sudo chmod 755 /usr/share/emacs24/site-lisp/std_comment.el
-sudo cp .files/std.el /usr/share/emacs/site-lisp/
-sudo cp .files/std_comment.el /usr/share/emacs/site-lisp/
-sudo chmod 755 /usr/share/emacs/site-lisp/std.el
-sudo chmod 755 /usr/share/emacs/site-lisp/std_comment.el
 cp .files/.emacs /home/$USER/
-chmod 555 /home/$USER/.emacs
+chmod ugo+rw /home/$USER/.emacs
 cp -r .files/.emacs.d /home/$USER/
-chmod 555 /home/$USER/.emacs.d
-chmod 555 /home/$USER/.emacs.d/*
+chmod ugo+rw /home/$USER/.emacs.d
+chmod ugo+rw /home/$USER/.emacs.d/*
 printf "${RED}"
 echo "------------------------------------------------------"
 echo "|INSTALLATION DE BUILD-ESSENTIALS POUR LA COMPILATION|"
