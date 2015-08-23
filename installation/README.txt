@@ -1,6 +1,7 @@
-###############################################################################################################
-# README DU SCRIPT D'INSTALLATION DE LA CONFIGURATION++ EPITECH POUR ORDINATEURS BASÉS DEBIAN (*BUNTU, MINT..)#
-###############################################################################################################
+##########################################################
+# README DU SCRIPT D'INSTALLATION DE LA CONFIGURATION++  #
+#  EPITECH POUR ORDINATEURS BASÉS DEBIAN (*BUNTU, MINT..)#
+##########################################################
 
 utilisation : ./install "login_x"
 
