@@ -40,6 +40,7 @@ echo "|INSTALLATION DE EMACS ET DU SYSTÈME DE HEADERS EPITECH|"
 echo "--------------------------------------------------------"
 printf "${STANDARD}"
 sudo apt-get install emacs
+sed 's/(getenv "USER")/"'$1'"/g' .files/std_comment.el > .files/std_comment.el
 sudo cp .files/std.el /usr/share/emacs24/site-lisp/
 sudo cp .files/std_comment.el /usr/share/emacs24/site-lisp/
 sudo chmod 755 /usr/share/emacs24/site-lisp/std.el
