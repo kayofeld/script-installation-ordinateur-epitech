@@ -11,7 +11,7 @@ version future permettra son utilisation sur quasiment tout les systèmes UNIX r
 Commande :
 
 ```shell
-$  ./install <login_x>
+$  ./installation/install <login_x>
 ```
 
 Argument :
@@ -52,7 +52,16 @@ Argument :
 
 * montag_p
 
+## Contributeurs
+
+* beluch_y
+* desnou_e
+* lesell_b
+
 Pour toute suggestion, n'hesitez pas à ouvrir une issue (dans github)
 
 Ce script a été écrit par montag_p, pour toute suggestion envoyer un mail à paulcmdt@gmail.com
+
+-----------------------
+
 Un merci est toujours le bienvenu :)
