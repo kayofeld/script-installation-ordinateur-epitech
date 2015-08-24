@@ -3,6 +3,12 @@
 #  EPITECH POUR ORDINATEURS BASÉS DEBIAN (*BUNTU, MINT..)#
 ##########################################################
 
+Ce script a pour but de vous permettre de travailler sur vos projets EPITECH, même si
+vous avez choisi de choisir autre chose que le dump du bocal.
+
+Pour le moment il n'est que mis au point pour les systèmes basés debian (mint/*buntu), mais une
+version future permettra l'utilisation sur quasiment tout les systèmes UNIX récents.
+
 utilisation : ./install "login_x"
 
 Ce script 
