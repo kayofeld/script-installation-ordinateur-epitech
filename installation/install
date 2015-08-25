@@ -181,7 +181,7 @@ script_header "INSTALLATION DE OCAML"
 sys_install ocaml
 
 script_header "INSTALLATION DE LA LIBNCURSES"
-sys_install libncurses
+sys_install libncurses5
 
 script_header "INSTALLATION DE CURL"
 sys_install curl
@@ -207,7 +207,7 @@ sys_install zsh
 
 script_header "OH-MY-ZSH" $C_YELLOW
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-handle_error $?
+#no error check here: remote install.sh has a chsh error
 chsh $USER -s /usr/bin/zsh
 handle_error $?
 echo "alias blih='blih -u $1'" >> /home/$USER/.zshrc
