@@ -55,7 +55,6 @@ Argument :
 ## Contributeurs
 
 * beluch_y
-* desnou_e
 * lesell_b
 
 Pour toute suggestion, n'hesitez pas à ouvrir une issue (dans github)
