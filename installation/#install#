@@ -171,8 +171,8 @@ script_header "INSTALLATION DE EMACS ET DU SYSTÈME DE HEADERS EPITECH"
 sys_install emacs
 setup_emacs
 
-script_header "INSTALLATION DE BUILD-ESSENTIAL POUR LA COMPILATION"
-sys_install build-essential
+script_header "INSTALLATION DE BUILD-ESSENTIALS POUR LA COMPILATION"
+sys_install build-essentials
 
 script_header "INSTALLATION DE VALGRIND"
 sys_install valgrind
