@@ -3,8 +3,13 @@
 Ce script a pour but de vous permettre de travailler sur vos projets EPITECH, même si
 vous avez choisi un autre OS que le dump du bocal.
 
-Pour le moment il ne fonctionne que pour les systèmes basés `Debian (Mint/*Buntu)`, mais une
-version future permettra son utilisation sur quasiment tout les systèmes UNIX récents.
+The installation script might work on any distribution based on :
+
+- opensuse
+- archlinux
+- fedora
+- debian
+- gentoo
 
 ## Utilisation :
 

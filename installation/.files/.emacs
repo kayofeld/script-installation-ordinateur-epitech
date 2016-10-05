@@ -3,7 +3,7 @@
 (setq load-path
       (append load-path (list my-elmode-dir)))
 
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/epitech/")
 
 (load "std.el")
 (load "std_comment.el")
