@@ -1,4 +1,4 @@
-# Script d'installation de la configuration Epitech pour OS basés Debian (*buntu, Mint..)
+# Script d'installation de la configuration Epitech pour OS basés Debian (*buntu, Mint..), Archlinux, Fedora, Opensuse, Gentoo
 
 Ce script a pour but de vous permettre de travailler sur vos projets EPITECH, même si
 vous avez choisi un autre OS que le dump du bocal.
@@ -16,12 +16,12 @@ The installation script might work on any distribution based on :
 Commande :
 
 ```shell
-$  ./installation/install <login_x>
+$  ./installation/install <prenom.nom@epitech.eu>
 ```
 
 Argument :
 
-`<login_x>` : Votre login Epitech
+`<prenom.nom@epitech.eu>` : Votre login Epitech
 
 
 ## Ce que le script fait :
@@ -30,7 +30,6 @@ Argument :
 
 * installation des paquets suivant :
     - blih
-    - ns_auth
     - emacs (et la configuration epitech)
     - build-essentials (libc etc. pour compilation)
     - libncurses
@@ -59,12 +58,11 @@ Argument :
 
 ## Contributeurs
 
-* beluch_y
 * lesell_b
 
 Pour toute suggestion, n'hesitez pas à ouvrir une issue (dans github)
 
-Ce script a été écrit par montag_p, pour toute suggestion envoyer un mail à paulcmdt@gmail.com
+Ce script a été écrit par montag_p, pour toute suggestion ou tout remerciement, envoyer un mail à paulcmdt@gmail.com
 
 -----------------------
 

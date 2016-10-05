@@ -25,9 +25,9 @@ C_RST=$ESC"0m"
 function usage
 {
 	echo
-	echo "Usage: $0 <login_x>"
+	echo "Usage: $0 <prenom.nom@epitech.eu>"
 	echo
-	echo "<login_x> : Votre login Epitech"
+	echo "<prenom.nom@epitech.eu> : Votre login Epitech"
 	echo
 }
 
@@ -216,9 +216,6 @@ if test -z "$login"; then
 fi
 
 script_init
-
-script_header "INSTALLATION DE NS_AUTH"
-script_install ns_auth
 
 script_header "INSTALLATION DE BLIH"
 script_install blih
