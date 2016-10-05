@@ -62,7 +62,7 @@ Argument :
 
 Pour toute suggestion, n'hesitez pas à ouvrir une issue (dans github)
 
-Ce script a été écrit par montag_p, pour toute suggestion ou tout remerciement, envoyer un mail à paulcmdt@gmail.com
+Ce script a été écrit par montag_p, pour toute suggestion ou remerciement, envoyer un mail à paulcmdt@gmail.com
 
 -----------------------
 
