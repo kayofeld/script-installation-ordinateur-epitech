@@ -296,7 +296,7 @@ script_header "DESIREZ VOUS INSTALLER MAKEFILE-GEN ?"
 read -p "Installer makefile-gen pour générer vos makefiles ? [O/n]" yn
 case $yn in
     [Nn]* );;
-    * ) git clone https://github.com/kayofeld/makefile-gen.git; cd makefile-gen; sudo ./install.sh; cd ../;;
+    * ) sys_install ruby; git clone https://github.com/kayofeld/makefile-gen.git; cd makefile-gen; sudo ./install.sh; cd ../;;
 esac
 
 
