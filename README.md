@@ -16,7 +16,7 @@ The installation script might work on any distribution based on :
 Commande :
 
 ```shell
-$  ./installation/install <prenom.nom@epitech.eu>
+$  ./install <prenom.nom@epitech.eu>
 ```
 
 Argument :
@@ -43,6 +43,9 @@ Argument :
     - tree
     - filezilla
     - man google (bonus)
+* paquet en option :
+    - makefile-gen
+
 
 * génère et uploade votre clé ssh sur le serveur epitech
 
@@ -51,6 +54,7 @@ Argument :
 * génère les alias dans le .zshrc pour blih et ns_auth avec votre nom d'utilisateur
 
 * les headers Epitech contiennent le login même si le username sur la session est différent
+
 
 ## Auteur
 

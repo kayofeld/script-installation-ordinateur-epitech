@@ -292,6 +292,14 @@ handle_error $?
 sudo chmod +s /sbin/reboot
 handle_error $?
 
+script_header "DESIREZ VOUS INSTALLER MAKEFILE-GEN ?"
+read -p "Installer makefile-gen pour générer vos makefiles ? [O/n]" yn
+case $yn in
+    [Nn]* );;
+    * ) git clone https://github.com/kayofeld/makefile-gen.git; cd makefile-gen; sudo ./install.sh; cd ../;;
+esac
+
+
 script_header "EFFACEMENT DES FICHIERS D'INSTALLATION"
 rm -rvf ../installation
 
