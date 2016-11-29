@@ -5,7 +5,7 @@
 ;; Login   <fred@epita.fr>
 ;; 
 ;; Started on  Thu Sep  9 23:34:05 1993 Frederic Denis
-;; Last update Thu Jul 15 10:34:13 2010 root
+;; Last update Tue Nov 29 18:42:22 2016 Paul Montague
 ;;
 ;; Based on Comment routines by Isaac
 ;;
@@ -23,13 +23,13 @@
 (setq header-made-by	"Made by "
       header-login	"Login   "
       header-login-beg	"<"
-      header-login-mid	"@"
+      header-login-mid	""
       header-login-end	">"
       header-started	"Started on  "
       header-last	"Last update "
       header-for	" for "
       header-in		" in "
-      domaine-name	"epitech.net")
+      domaine-name	"")
 (if (setq user-nickname (getenv "USER_NICKNAME"))
     t 
   (setq user-nickname (user-full-name))

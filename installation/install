@@ -194,8 +194,8 @@ function setup_emacs
 
 	cp -r $files/.emacs.d $dir_tmp
 
-	sed 's/(getenv "USER")/"'$login'"/g' $emacs_tmp/std_comment.el > $emacs_tmp/std_comment.el.tmp
-	mv $emacs_tmp/std_comment.el.tmp $emacs_tmp/std_comment.el
+	sed 's/(getenv "USER")/"'$login'"/g' $emacs_tmp/epitech/std_comment.el > $emacs_tmp/epitech/std_comment.el.tmp
+	mv $emacs_tmp/epitech/std_comment.el.tmp $emacs_tmp/epitech/std_comment.el
 
 	cp $files/.emacs /home/$USER/
 	chmod +rw /home/$USER/.emacs
