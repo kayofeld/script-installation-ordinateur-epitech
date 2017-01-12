@@ -51,8 +51,6 @@ Argument :
 
 * change votre shell de base en zsh
 
-* génère les alias dans le .zshrc pour blih et ns_auth avec votre nom d'utilisateur
-
 * les headers Epitech contiennent le login même si le username sur la session est différent
 
 
