@@ -299,6 +299,13 @@ case $yn in
     * ) sys_install ruby; git clone https://github.com/kayofeld/makefile-gen.git; cd makefile-gen; sudo ./install.sh; cd ../;;
 esac
 
+script_header "DESIREZ VOUS INSTALLER HTOP ?"
+read -p "Installer htop pour avoir un top plus pratique ? [O/n]" yn
+case $yn in
+    [Nn]* );;
+    * ) sys_install htop;;
+esac
+
 
 script_header "EFFACEMENT DES FICHIERS D'INSTALLATION"
 rm -rvf ../installation
