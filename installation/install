@@ -116,16 +116,16 @@ function sys_upgrade
 	fi
 	case "$os" in
 		opensuse)
-			sudo zypper update
+			sudo zypper -y update
 			;;
 		archlinux)
-			sudo pacman -Syu
+			sudo pacman --noconfirm -Syu
 			;;
 		fedora)
-			sudo dnf update
+			sudo dnf -y update
 			;;
 		debian)
-			sudo apt-get update; sudo apt-get upgrade
+			sudo apt-get -y update; sudo apt-get -y upgrade
 			;;
 		gentoo)
 			sudo emerge -u world
@@ -142,16 +142,16 @@ function sys_install
 	{
 		case "$os" in
 			opensuse)
-				echo "zypper install"
+				echo "zypper -y install"
 				;;
 			archlinux)
-				echo "pacman -S"
+				echo "pacman --noconfirm -S"
 				;;
 			fedora)
-				echo "dnf install"
+				echo "dnf -y install"
 				;;
 			debian)
-				echo "apt-get install"
+				echo "apt-get -y install"
 				;;
 			gentoo)
 				echo "emerge"
