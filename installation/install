@@ -268,7 +268,11 @@ script_header "ZSH" $C_YELLOW
 sys_install zsh
 
 script_header "OH-MY-ZSH" $C_YELLOW
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh > oh-my-zsh.sh
+sed -i "s:env zsh:exit:g" oh-my-zsh.sh
+chmod 755 oh-my-zsh.sh
+./oh-my-zsh.sh
+rm oh-my-zsh.sh
 #no error check here: remote install.sh has a chsh error
 chsh $USER -s /usr/bin/zsh
 handle_error $?
