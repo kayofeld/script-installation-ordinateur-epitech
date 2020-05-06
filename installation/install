@@ -125,7 +125,7 @@ function sys_upgrade
 			sudo dnf -y update
 			;;
 		debian)
-			sudo apt-get -y update; sudo apt-get -y upgrade
+			sudo apt -y update; sudo apt -y upgrade
 			;;
 		gentoo)
 			sudo emerge -u world
@@ -151,7 +151,7 @@ function sys_install
 				echo "dnf -y install"
 				;;
 			debian)
-				echo "apt-get -y install"
+				echo "apt -y install"
 				;;
 			gentoo)
 				echo "emerge"
